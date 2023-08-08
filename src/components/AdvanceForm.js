@@ -3,6 +3,7 @@ import React from "react";
 import CustomInput from "./CoustomeInput";
 import { advancedSchema } from "../schemas";
 import CoustomeSelect from "./CoustomeSelect";
+import CoustomeCheckBox from "./CoustomeCheckBox";
 
 function AdvancForm() {
   return (
@@ -31,6 +32,7 @@ function AdvancForm() {
               <option value="manager">Product Manager</option>
               <option value="other">Other</option>
             </CoustomeSelect>
+            <CoustomeCheckBox type="checkbox" name="acceptedTos" />
             {props.errors.name && <div id="feedback">{props.errors.name}</div>}
             <button type="submit">Submit</button>
           </Form>

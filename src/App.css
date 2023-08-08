@@ -71,7 +71,7 @@ select::placeholder {
 input[type="checkbox"] {
   width: fit-content;
   margin-right: 0.5rem;
-  transform: scale(1.25);
+  transform: scale(1.35);
 }
 
 button {
