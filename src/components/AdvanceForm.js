@@ -12,7 +12,7 @@ function AdvancForm() {
         initialValues={{ name: "", jobType: "", acceptedTos: false }}
         validationSchema={advancedSchema}
       >
-        {(props) => (
+        {({isSubmitting}) => (
           <Form>
             {/* <Field type="text" name="email" placeholder="Email" /> */}
             <CustomInput
@@ -34,7 +34,7 @@ function AdvancForm() {
             </CoustomeSelect>
             <CoustomeCheckBox type="checkbox" name="acceptedTos" />
             {props.errors.name && <div id="feedback">{props.errors.name}</div>}
-            <button type="submit">Submit</button>
+            <button disabled={isSubmitting} type="submit">Submit</button>
           </Form>
         )}
       </Formik>
