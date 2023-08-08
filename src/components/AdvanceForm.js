@@ -2,6 +2,7 @@ import { Field, Form, Formik } from "formik";
 import React from "react";
 import CustomInput from "./CoustomeInput";
 import { advancedSchema } from "../schemas";
+import CoustomeSelect from "./CoustomeSelect";
 
 function AdvancForm() {
   return (
@@ -19,6 +20,17 @@ function AdvancForm() {
               type="text"
               placeholder="Enter your username"
             />
+            <CoustomeSelect
+              label="job Type"
+              name="jobType"
+              placeholder="Enter your job type"
+            >
+              <option value="">Please select a job type</option>
+              <option value="developer">Developer</option>
+              <option value="designer">Designer</option>
+              <option value="manager">Product Manager</option>
+              <option value="other">Other</option>
+            </CoustomeSelect>
             {props.errors.name && <div id="feedback">{props.errors.name}</div>}
             <button type="submit">Submit</button>
           </Form>
