@@ -1,4 +1,4 @@
-import { Field, Form, Formik } from "formik";
+import { Form, Formik } from "formik";
 import React from "react";
 import CustomInput from "./CoustomeInput";
 import { advancedSchema } from "../schemas";
@@ -12,7 +12,7 @@ function AdvancForm() {
         initialValues={{ name: "", jobType: "", acceptedTos: false }}
         validationSchema={advancedSchema}
       >
-        {({isSubmitting}) => (
+        {({ isSubmitting }) => (
           <Form>
             {/* <Field type="text" name="email" placeholder="Email" /> */}
             <CustomInput
@@ -33,8 +33,10 @@ function AdvancForm() {
               <option value="other">Other</option>
             </CoustomeSelect>
             <CoustomeCheckBox type="checkbox" name="acceptedTos" />
-            {props.errors.name && <div id="feedback">{props.errors.name}</div>}
-            <button disabled={isSubmitting} type="submit">Submit</button>
+            {/* {props.errors.name && <div id="feedback">{props.errors.name}</div>} */}
+            <button disabled={isSubmitting} type="submit">
+              Submit
+            </button>
           </Form>
         )}
       </Formik>
